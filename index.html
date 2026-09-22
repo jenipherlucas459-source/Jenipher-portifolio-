@@ -13,10 +13,6 @@
 
 <style>
 
-/* =========================
-   BASIC
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -39,11 +35,6 @@ a {
     color: inherit;
 }
 
-
-/* =========================
-   BACKGROUND
-========================= */
-
 body::before {
     content: "";
     position: fixed;
@@ -51,32 +42,27 @@ body::before {
     z-index: -10;
 
     background:
-        radial-gradient(
-            circle at 50% 25%,
-            rgba(82, 199, 255, 0.35),
-            transparent 27%
-        ),
-        radial-gradient(
-            circle at 5% 80%,
-            rgba(74, 170, 230, 0.30),
-            transparent 27%
-        ),
-        radial-gradient(
-            circle at 95% 70%,
-            rgba(180, 232, 255, 0.55),
-            transparent 30%
-        ),
+        radial-gradient(circle at 50% 25%,
+        rgba(82,199,255,.35),
+        transparent 27%),
+
+        radial-gradient(circle at 5% 80%,
+        rgba(74,170,230,.30),
+        transparent 27%),
+
+        radial-gradient(circle at 95% 70%,
+        rgba(180,232,255,.55),
+        transparent 30%),
+
         linear-gradient(
-            #f8fdff,
-            #e8f8ff 55%,
-            #c9eaff
+        #f8fdff,
+        #e8f8ff 55%,
+        #c9eaff
         );
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     height: 92px;
@@ -86,10 +72,10 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(255,255,255,0.86);
+    background: rgba(255,255,255,.86);
     backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid rgba(30,100,150,0.08);
+    border-bottom: 1px solid rgba(30,100,150,.08);
 
     position: sticky;
     top: 0;
@@ -127,7 +113,7 @@ nav {
 }
 
 nav a {
-    transition: 0.25s;
+    transition: .25s;
 }
 
 nav a:hover {
@@ -150,9 +136,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 825px;
@@ -178,13 +162,13 @@ nav a:hover {
 
     background:
         linear-gradient(
-            180deg,
-            rgba(180,220,245,0.44),
-            rgba(255,255,255,0.74)
+        180deg,
+        rgba(180,220,245,.44),
+        rgba(255,255,255,.74)
         );
 
-    border-top: 1px solid rgba(40,110,155,0.08);
-    border-bottom: 1px solid rgba(40,110,155,0.10);
+    border-top: 1px solid rgba(40,110,155,.08);
+    border-bottom: 1px solid rgba(40,110,155,.10);
 
     z-index: -2;
 }
@@ -201,22 +185,20 @@ nav a:hover {
 
     background:
         linear-gradient(
-            180deg,
-            rgba(255,255,255,0.05),
-            rgba(73,160,215,0.30)
+        180deg,
+        rgba(255,255,255,.05),
+        rgba(73,160,215,.30)
         );
 
     z-index: -2;
 }
 
 
-/* =========================
-   DECORATION
-========================= */
+/* DECORATION */
 
 .decor {
     position: absolute;
-    border: 1px solid rgba(40,125,180,0.20);
+    border: 1px solid rgba(40,125,180,.20);
     pointer-events: none;
 }
 
@@ -225,6 +207,7 @@ nav a:hover {
     height: 350px;
     left: 5%;
     top: 30px;
+
     border-right: 0;
     border-bottom: 0;
 }
@@ -234,6 +217,7 @@ nav a:hover {
     height: 450px;
     right: 8%;
     top: 25px;
+
     border-left: 0;
     border-bottom: 0;
 }
@@ -243,11 +227,11 @@ nav a:hover {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(50,160,220,0.28);
+    border: 1px solid rgba(50,160,220,.28);
 
     box-shadow:
-        inset 0 0 20px rgba(255,255,255,0.80),
-        0 0 25px rgba(70,190,240,0.15);
+        inset 0 0 20px rgba(255,255,255,.80),
+        0 0 25px rgba(70,190,240,.15);
 }
 
 .bubble.one {
@@ -279,9 +263,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   PROFILE
-========================= */
+/* PROFILE */
 
 .profile-area {
     width: 530px;
@@ -305,9 +287,9 @@ nav a:hover {
 
     background:
         radial-gradient(
-            circle,
-            rgba(30,160,255,0.36),
-            transparent 65%
+        circle,
+        rgba(30,160,255,.36),
+        transparent 65%
         );
 
     filter: blur(8px);
@@ -323,17 +305,17 @@ nav a:hover {
 
     background:
         linear-gradient(
-            145deg,
-            #c9f7ff,
-            #159df0,
-            #76e1ff,
-            #b9efff
+        145deg,
+        #c9f7ff,
+        #159df0,
+        #76e1ff,
+        #b9efff
         );
 
     box-shadow:
         0 0 20px #5cd5ff,
-        0 0 55px rgba(40,165,255,0.48),
-        inset 0 0 28px rgba(255,255,255,0.90);
+        0 0 55px rgba(40,165,255,.48),
+        inset 0 0 28px rgba(255,255,255,.90);
 
     overflow: hidden;
 
@@ -386,9 +368,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   HERO TEXT
-========================= */
+/* HERO TEXT */
 
 .hero-content {
     width: min(1100px,100%);
@@ -436,17 +416,13 @@ nav a:hover {
 }
 
 
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 
 .skills {
     margin: 27px auto 15px;
 
     display: flex;
-
     justify-content: center;
-
     flex-wrap: wrap;
 
     gap: 16px;
@@ -457,13 +433,13 @@ nav a:hover {
 
     border-radius: 30px;
 
-    background: rgba(255,255,255,0.60);
+    background: rgba(255,255,255,.60);
 
-    border: 1px solid rgba(75,163,220,0.34);
+    border: 1px solid rgba(75,163,220,.34);
 
     box-shadow:
-        0 7px 20px rgba(50,130,184,0.10),
-        inset 0 0 12px rgba(255,255,255,0.70);
+        0 7px 20px rgba(50,130,184,.10),
+        inset 0 0 12px rgba(255,255,255,.70);
 
     font-size: 15px;
 
@@ -473,9 +449,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   LAPTOP
-========================= */
+/* LAPTOP */
 
 .laptop {
     width: 610px;
@@ -495,7 +469,7 @@ nav a:hover {
     border-radius: 16px 16px 6px 6px;
 
     box-shadow:
-        0 12px 35px rgba(24,60,91,0.35);
+        0 12px 35px rgba(24,60,91,.35);
 
     overflow: hidden;
 
@@ -512,7 +486,6 @@ nav a:hover {
     background: white;
 
     display: flex;
-
     align-items: center;
 
     gap: 13px;
@@ -566,8 +539,7 @@ nav a:hover {
 .projects {
     display: grid;
 
-    grid-template-columns:
-        repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
 
     gap: 13px;
 }
@@ -582,7 +554,7 @@ nav a:hover {
     padding: 10px;
 
     box-shadow:
-        0 3px 8px rgba(39,80,110,0.06);
+        0 3px 8px rgba(39,80,110,.06);
 }
 
 .project-image {
@@ -622,14 +594,14 @@ nav a:hover {
 
     background:
         linear-gradient(
-            #9ca9b6,
-            #5f6b77
+        #9ca9b6,
+        #5f6b77
         );
 
     border-radius: 0 0 50% 50%;
 
     box-shadow:
-        0 10px 15px rgba(36,79,111,0.22);
+        0 10px 15px rgba(36,79,111,.22);
 }
 
 .laptop-base::after {
@@ -648,15 +620,13 @@ nav a:hover {
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 section.normal {
     padding: 90px 7%;
 
     background:
-        rgba(255,255,255,0.78);
+        rgba(255,255,255,.78);
 }
 
 .container {
@@ -706,7 +676,7 @@ section.normal h2 {
     border-radius: 22px;
 
     background:
-        rgba(255,255,255,0.75);
+        rgba(255,255,255,.75);
 }
 
 .work-number {
@@ -739,12 +709,69 @@ section.normal h2 {
     line-height: 1.7;
 }
 
+
+/* CONTACT */
+
 .contact {
     text-align: center;
 }
 
 .contact h2 {
-    margin: 0 auto 25px;
+    margin: 0 auto 30px;
+}
+
+.contact-info {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.contact-card {
+    min-width: 230px;
+
+    padding: 18px 25px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.75);
+
+    border: 1px solid #cfe6f4;
+
+    box-shadow:
+        0 8px 25px rgba(40,120,170,.10);
+}
+
+.contact-card .icon {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.contact-card strong {
+    display: block;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+
+    color: #126cc0;
+}
+
+.contact-card a {
+    color: #294e70;
+
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.contact-card a:hover {
+    color: #087fd0;
 }
 
 .contact-button {
@@ -761,13 +788,11 @@ section.normal h2 {
     font-weight: 700;
 
     box-shadow:
-        0 10px 25px rgba(23,111,194,0.25);
+        0 10px 25px rgba(23,111,194,.25);
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -779,7 +804,7 @@ footer {
     font-size: 16px;
 
     background:
-        rgba(213,240,253,0.88);
+        rgba(213,240,253,.88);
 }
 
 footer span {
@@ -787,9 +812,7 @@ footer span {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:800px) {
 
@@ -823,14 +846,14 @@ footer span {
         gap: 0;
 
         background:
-            rgba(255,255,255,0.97);
+            rgba(255,255,255,.97);
 
         border: 1px solid #d6e9f5;
 
         border-radius: 16px;
 
         box-shadow:
-            0 18px 45px rgba(41,114,168,0.18);
+            0 18px 45px rgba(41,114,168,.18);
 
         overflow: hidden;
     }
@@ -935,6 +958,10 @@ footer span {
     .work-grid {
         grid-template-columns: 1fr;
     }
+
+    .contact-card {
+        width: 100%;
+    }
 }
 
 </style>
@@ -943,10 +970,6 @@ footer span {
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
@@ -990,19 +1013,14 @@ footer span {
 
 
 
-<!-- =========================
-     HERO
-========================= -->
-
 <main id="home">
 
-<section class="hero">
 
+<section class="hero">
 
     <div class="decor left"></div>
 
     <div class="decor right"></div>
-
 
     <div class="bubble one"></div>
 
@@ -1013,27 +1031,17 @@ footer span {
     <div class="bubble four"></div>
 
 
-
-    <!-- PROFILE -->
-
     <div class="profile-area">
 
         <div class="profile-glow"></div>
 
-
         <div class="profile-ring">
-
-            <!--
-              Weka picha yako ndani ya repository
-              kwa jina profile.jpg
-            -->
 
             <img
                 src="profile.jpg"
                 alt="Jenipher Lucas">
 
         </div>
-
 
         <span class="spark one"></span>
 
@@ -1047,20 +1055,15 @@ footer span {
 
 
 
-    <!-- HERO CONTENT -->
-
     <div class="hero-content">
-
 
         <h1>
             Hi I’m <span>Jenipher Lucas</span>
         </h1>
 
-
         <h2>
             Creative Designer &amp; Developer
         </h2>
-
 
         <p class="description">
 
@@ -1074,48 +1077,35 @@ footer span {
         </p>
 
 
-
-        <!-- SKILLS -->
-
         <div class="skills" id="skills">
-
 
             <span class="skill">
                 ☷ &nbsp; UI/UX Design
             </span>
 
-
             <span class="skill">
                 ♙ &nbsp; React &amp; Next.js
             </span>
-
 
             <span class="skill">
                 ◈ &nbsp; Frontend Development
             </span>
 
-
             <span class="skill">
                 ⌘ &nbsp; Python • APIs
             </span>
-
 
             <span class="skill">
                 ◉ &nbsp; Figma • Prototyping
             </span>
 
-
         </div>
 
 
 
-        <!-- LAPTOP -->
-
         <div class="laptop">
 
-
             <div class="laptop-screen">
-
 
                 <div class="screen-top">
 
@@ -1124,13 +1114,9 @@ footer span {
                     </span>
 
                     <span>Home</span>
-
                     <span>Work</span>
-
                     <span>About</span>
-
                     <span>Skills</span>
-
                     <span>Contact</span>
 
                     <span class="hire">
@@ -1140,21 +1126,16 @@ footer span {
                 </div>
 
 
-
                 <div class="screen-body">
-
 
                     <div class="project-title">
                         PROJECTS
                     </div>
 
-
                     <div class="line"></div>
 
 
-
                     <div class="projects">
-
 
                         <div class="project">
 
@@ -1171,7 +1152,6 @@ footer span {
                             </small>
 
                         </div>
-
 
 
                         <div class="project">
@@ -1191,7 +1171,6 @@ footer span {
                         </div>
 
 
-
                         <div class="project">
 
                             <div class="project-image">
@@ -1208,7 +1187,6 @@ footer span {
 
                         </div>
 
-
                     </div>
 
                 </div>
@@ -1218,20 +1196,13 @@ footer span {
 
             <div class="laptop-base"></div>
 
-
         </div>
 
-
     </div>
-
 
 </section>
 
 
-
-<!-- =========================
-     WORK
-========================= -->
 
 <section class="normal" id="work">
 
@@ -1241,15 +1212,12 @@ footer span {
             SELECTED WORK
         </p>
 
-
         <h2>
             Designing ideas into useful digital experiences.
         </h2>
 
 
-
         <div class="work-grid">
-
 
             <article class="work-card">
 
@@ -1267,7 +1235,6 @@ footer span {
                 </p>
 
             </article>
-
 
 
             <article class="work-card">
@@ -1288,7 +1255,6 @@ footer span {
             </article>
 
 
-
             <article class="work-card">
 
                 <span class="work-number">
@@ -1306,7 +1272,6 @@ footer span {
 
             </article>
 
-
         </div>
 
     </div>
@@ -1314,10 +1279,6 @@ footer span {
 </section>
 
 
-
-<!-- =========================
-     ABOUT
-========================= -->
 
 <section class="normal about" id="about">
 
@@ -1327,11 +1288,9 @@ footer span {
             ABOUT
         </p>
 
-
         <h2>
             I turn ideas into polished digital experiences.
         </h2>
-
 
         <p class="about-text">
 
@@ -1347,10 +1306,6 @@ footer span {
 
 
 
-<!-- =========================
-     CONTACT
-========================= -->
-
 <section class="normal contact" id="contact">
 
     <div class="container">
@@ -1359,10 +1314,80 @@ footer span {
             CONTACT
         </p>
 
-
         <h2>
             Have a project in mind?
         </h2>
+
+
+        <div class="contact-info">
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    ✉️
+                </div>
+
+                <strong>
+                    Email
+                </strong>
+
+                <a href="mailto:jenipherlucas459@gmail.com">
+
+                    jenipherlucas459@gmail.com
+
+                </a>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <strong>
+                    WhatsApp
+                </strong>
+
+                <a
+                    href="https://wa.me/255787812998"
+                    target="_blank">
+
+                    0787812998
+
+                </a>
+
+            </div>
+
+
+            <!-- NORMAL CALL -->
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <strong>
+                    Phone
+                </strong>
+
+                <a href="tel:0614902998">
+
+                    0614902998
+
+                </a>
+
+            </div>
+
+
+        </div>
 
 
         <a
@@ -1381,10 +1406,6 @@ footer span {
 </main>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1407,10 +1428,6 @@ footer span {
 </footer>
 
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
 
 <script>
 
