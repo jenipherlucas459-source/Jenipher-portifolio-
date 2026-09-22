@@ -3,81 +3,1445 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jenipher Lucas | Designer & Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+<title>JL • Portfolio | Jenipher Lucas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
-body{background:#f8fbff}
-nav{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(20px);padding:14px 7%;display:flex;justify-content:space-between;border-bottom:1px solid #dbeafe;z-index:10}
-.logo{font-weight:800;color:#1e3a8a;display:flex;gap:8px;align-items:center}
-.logo b{width:32px;height:32px;background:#1e3a8a;color:white;display:grid;place-items:center;border-radius:9px}
-.btn{padding:11px 20px;border-radius:100px;border:none;font-weight:700;cursor:pointer}
-.btn-blue{background:#1e3a8a;color:white;box-shadow:0 8px 20px rgba(30,58,138,.3)}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;padding:60px 7%;background:radial-gradient(800px 400px at 0% 0%,#dbeafe,transparent)}
-h1{font-size:48px;line-height:.9;letter-spacing:-1px;color:#0f172a}h1 span{color:#1e3a8a}
-.p{color:#475569;margin:16px 0;line-height:1.6}
-.wrap{position:relative;display:grid;place-items:center}
-.blob{position:absolute;width:340px;height:340px;background:linear-gradient(135deg,#1e3a8a,#60a5fa);border-radius:50%}
-.photo{position:relative;width:310px;height:310px;border-radius:50%;overflow:hidden;border:8px solid white;box-shadow:0 20px 50px rgba(30,58,138,.3);z-index:2}
-.photo img{width:100%;height:100%;object-fit:cover;background:#dbeafe}
-.tag{position:absolute;z-index:3;background:white;padding:8px 12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.12);font-size:11px;font-weight:700}
-.t1{top:10px;right:10px}.t2{bottom:10px;left:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:20px}
-.card{background:white;border:1px solid #e0e7ff;border-radius:18px;overflow:hidden}
-.thumb{height:150px;background:linear-gradient(135deg,#dbeafe,#bfdbfe);display:grid;place-items:center;font-size:40px}
-.bdy{padding:14px}.bdy p{font-size:12px;color:#64748b}
-.section{padding:45px 7%}.white{background:white}.light{background:#f0f7ff}
-.cta{margin:40px 7%;background:linear-gradient(135deg,#1e3a8a,#4338ca);border-radius:28px;padding:40px;color:white;display:grid;grid-template-columns:1.3fr .7fr;gap:20px}
-@media(max-width:800px){.hero,.cta{grid-template-columns:1fr;text-align:center}.wrap{order:-1}}
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #123c70;
+    background: #eaf8ff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(82, 199, 255, 0.35),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 5% 80%,
+            rgba(74, 170, 230, 0.30),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 95% 70%,
+            rgba(180, 232, 255, 0.55),
+            transparent 30%
+        ),
+        linear-gradient(
+            #f8fdff,
+            #e8f8ff 55%,
+            #c9eaff
+        );
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 92px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255,255,255,0.86);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(30,100,150,0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-jl {
+    font-size: 43px;
+    font-weight: 800;
+    letter-spacing: -9px;
+    color: #1684cc;
+}
+
+.logo-dot {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.logo-text {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+}
+
+nav {
+    display: flex;
+    gap: 29px;
+    font-size: 17px;
+}
+
+nav a {
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: #1388d7;
+}
+
+.menu {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.menu span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    margin: 5px;
+    background: #164875;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 825px;
+    position: relative;
+    overflow: hidden;
+
+    padding: 0 5% 55px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 238px;
+
+    height: 385px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(180,220,245,0.44),
+            rgba(255,255,255,0.74)
+        );
+
+    border-top: 1px solid rgba(40,110,155,0.08);
+    border-bottom: 1px solid rgba(40,110,155,0.10);
+
+    z-index: -2;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 270px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.05),
+            rgba(73,160,215,0.30)
+        );
+
+    z-index: -2;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.decor {
+    position: absolute;
+    border: 1px solid rgba(40,125,180,0.20);
+    pointer-events: none;
+}
+
+.decor.left {
+    width: 120px;
+    height: 350px;
+    left: 5%;
+    top: 30px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.decor.right {
+    width: 120px;
+    height: 450px;
+    right: 8%;
+    top: 25px;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.bubble {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(50,160,220,0.28);
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,0.80),
+        0 0 25px rgba(70,190,240,0.15);
+}
+
+.bubble.one {
+    width: 190px;
+    height: 190px;
+    left: -55px;
+    bottom: 45px;
+}
+
+.bubble.two {
+    width: 105px;
+    height: 105px;
+    right: 13%;
+    bottom: 65px;
+}
+
+.bubble.three {
+    width: 70px;
+    height: 70px;
+    left: 29%;
+    bottom: 75px;
+}
+
+.bubble.four {
+    width: 50px;
+    height: 50px;
+    right: 18%;
+    top: 130px;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-area {
+    width: 530px;
+    height: 440px;
+
+    margin: -15px auto -20px;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+.profile-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(30,160,255,0.36),
+            transparent 65%
+        );
+
+    filter: blur(8px);
+}
+
+.profile-ring {
+    width: 385px;
+    height: 385px;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c9f7ff,
+            #159df0,
+            #76e1ff,
+            #b9efff
+        );
+
+    box-shadow:
+        0 0 20px #5cd5ff,
+        0 0 55px rgba(40,165,255,0.48),
+        inset 0 0 28px rgba(255,255,255,0.90);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.profile-ring img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 38%;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+.spark {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 0 16px #52d6ff;
+}
+
+.spark.one {
+    left: 105px;
+    top: 140px;
+}
+
+.spark.two {
+    right: 95px;
+    top: 105px;
+}
+
+.spark.three {
+    right: 55px;
+    bottom: 125px;
+}
+
+.spark.four {
+    left: 85px;
+    bottom: 105px;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-content {
+    width: min(1100px,100%);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 58px;
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    color: #123b6d;
+}
+
+.hero h1 span {
+    white-space: nowrap;
+}
+
+.hero h2 {
+    font-size: 41px;
+
+    line-height: 1.15;
+
+    margin: 4px 0 10px;
+
+    color: #116bc1;
+
+    font-weight: 700;
+
+    letter-spacing: -1.3px;
+}
+
+.description {
+    font-size: 16px;
+    color: #234d75;
+}
+
+.description b {
+    padding: 0 8px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    margin: 27px auto 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+}
+
+.skill {
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.60);
+
+    border: 1px solid rgba(75,163,220,0.34);
+
+    box-shadow:
+        0 7px 20px rgba(50,130,184,0.10),
+        inset 0 0 12px rgba(255,255,255,0.70);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   LAPTOP
+========================= */
+
+.laptop {
+    width: 610px;
+
+    margin: 8px auto 0;
+
+    position: relative;
+}
+
+.laptop-screen {
+    height: 270px;
+
+    background: #111c29;
+
+    border: 10px solid #252d38;
+
+    border-radius: 16px 16px 6px 6px;
+
+    box-shadow:
+        0 12px 35px rgba(24,60,91,0.35);
+
+    overflow: hidden;
+
+    padding: 12px;
+
+    color: #273a4f;
+
+    text-align: left;
+}
+
+.screen-top {
+    height: 25px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 10px;
+
+    font-size: 5.5px;
+
+    white-space: nowrap;
+}
+
+.screen-logo {
+    font-weight: 800;
+    color: #126ac1;
+    margin-right: auto;
+}
+
+.hire {
+    margin-left: auto;
+
+    background: #0d6dcc;
+
+    color: white;
+
+    padding: 3px 7px;
+
+    border-radius: 4px;
+}
+
+.screen-body {
+    height: calc(100% - 25px);
+
+    background: #f7fbff;
+
+    padding: 18px;
+}
+
+.project-title {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.line {
+    height: 2px;
+
+    background: #cfe5f4;
+
+    margin: 8px 0 14px;
+}
+
+.projects {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 13px;
+}
+
+.project {
+    background: white;
+
+    border: 1px solid #e2ebf2;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    box-shadow:
+        0 3px 8px rgba(39,80,110,0.06);
+}
+
+.project-image {
+    height: 54px;
+
+    border-radius: 4px;
+
+    background: #edf5fb;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #2c81c7;
+
+    font-size: 22px;
+
+    margin-bottom: 9px;
+}
+
+.project strong {
+    display: block;
+    font-size: 9px;
+}
+
+.project small {
+    font-size: 6px;
+    color: #718396;
+}
+
+.laptop-base {
+    width: 660px;
+
+    height: 17px;
+
+    margin: -1px auto 0;
+
+    background:
+        linear-gradient(
+            #9ca9b6,
+            #5f6b77
+        );
+
+    border-radius: 0 0 50% 50%;
+
+    box-shadow:
+        0 10px 15px rgba(36,79,111,0.22);
+}
+
+.laptop-base::after {
+    content: "";
+
+    display: block;
+
+    width: 120px;
+    height: 4px;
+
+    background: #6f7c88;
+
+    border-radius: 0 0 8px 8px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section.normal {
+    padding: 90px 7%;
+
+    background:
+        rgba(255,255,255,0.78);
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.eyebrow {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: 800;
+
+    color: #1678c7;
+
+    margin-bottom: 12px;
+}
+
+section.normal h2 {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 43px;
+
+    max-width: 720px;
+}
+
+.work-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 22px;
+
+    margin-top: 35px;
+}
+
+.work-card {
+    padding: 30px;
+
+    border: 1px solid #cfe6f4;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,0.75);
+}
+
+.work-number {
+    color: #1582cd;
+    font-weight: 800;
+}
+
+.work-card h3 {
+    margin: 15px 0 8px;
+
+    font-size: 22px;
+}
+
+.work-card p {
+    color: #5a6f82;
+    line-height: 1.7;
+}
+
+.about {
+    background: #edf9ff !important;
+}
+
+.about-text {
+    max-width: 750px;
+
+    margin-top: 20px;
+
+    color: #5a6f82;
+
+    line-height: 1.7;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    margin: 0 auto 25px;
+}
+
+.contact-button {
+    display: inline-block;
+
+    background: #176fc2;
+
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px rgba(23,111,194,0.25);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 26px 15px;
+
+    color: #1c4a76;
+
+    font-size: 16px;
+
+    background:
+        rgba(213,240,253,0.88);
+}
+
+footer span {
+    padding: 0 7px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px) {
+
+    header {
+        height: 76px;
+        padding: 0 5%;
+    }
+
+    .logo-text {
+        font-size: 27px;
+    }
+
+    .logo-jl {
+        font-size: 38px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+
+        right: 5%;
+        top: 70px;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background:
+            rgba(255,255,255,0.97);
+
+        border: 1px solid #d6e9f5;
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 18px 45px rgba(41,114,168,0.18);
+
+        overflow: hidden;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 14px 24px;
+    }
+
+    .hero {
+        min-height: 760px;
+        padding-bottom: 35px;
+    }
+
+    .profile-area {
+        width: 360px;
+        height: 340px;
+
+        margin: -4px auto -10px;
+    }
+
+    .profile-ring {
+        width: 290px;
+        height: 290px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+        letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+        white-space: normal;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .skills {
+        gap: 8px;
+        margin-top: 18px;
+    }
+
+    .skill {
+        font-size: 12px;
+        padding: 9px 13px;
+    }
+
+    .laptop {
+        width: 90%;
+        margin-top: 8px;
+    }
+
+    .laptop-screen {
+        height: 190px;
+        border-width: 7px;
+        padding: 7px;
+    }
+
+    .laptop-base {
+        width: 105%;
+        height: 12px;
+    }
+
+    .screen-body {
+        padding: 10px;
+    }
+
+    .project {
+        padding: 6px;
+    }
+
+    .project-image {
+        height: 34px;
+    }
+
+    .project strong {
+        font-size: 7px;
+    }
+
+    .project small {
+        font-size: 5px;
+    }
+
+    section.normal {
+        padding: 65px 6%;
+    }
+
+    section.normal h2 {
+        font-size: 34px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
 </head>
+
+
 <body>
 
-<nav>
-<div class="logo"><b>JL</b> Jenipher Lucas</div>
-<button class="btn btn-blue">Hire Me ✨</button>
-</nav>
 
-<div class="hero">
-<div>
-<span style="background:#e0e7ff;color:#1e3a8a;padding:6px 12px;border-radius:100px;font-size:11px;font-weight:700">✨ AVAILABLE FOR FREELANCE</span>
-<h1 style="margin-top:14px">Hi, I'm <span>Jenipher Lucas</span> — Creative Designer & Developer</h1>
-<p class="p">I design and build beautiful, user-centered digital experiences. Focused on modern web apps and brand design.</p>
-<button class="btn btn-blue">View My Work →</button>
-<button class="btn" style="background:white;border:1.5px solid #bfdbfe;color:#1e3a8a;margin-left:8px">Download CV</button>
-</div>
+<!-- =========================
+     HEADER
+========================= -->
 
-<div class="wrap">
-<div class="blob"></div>
-<div class="photo">
-<!-- 👇 HAPA NDIPO UTAWEKA PICHA YAKO MWENYEWE 👇 -->
-<img src="jenipher.jpg" alt="Jenipher Lucas">
-</div>
-<div class="tag t1">🎨 UI/UX Expert</div>
-<div class="tag t2">📍 Dar • <span style="color:#22c55e">● Online</span></div>
-</div>
-</div>
+<header>
 
-<div class="section white">
-<h2>My Work</h2>
-<div class="cards">
-<div class="card"><div class="thumb">🎨</div><div class="bdy"><h3>Brand Identity — Nova Co</h3><p>Branding • 2026</p></div></div>
-<div class="card"><div class="thumb">💻</div><div class="bdy"><h3>Web App — TaskFlow</h3><p>React • Tailwind</p></div></div>
-<div class="card"><div class="thumb">📱</div><div class="bdy"><h3>Mobile App — FinTrack</h3><p>iOS • Fintech</p></div></div>
-</div>
-</div>
+    <a href="#home" class="logo">
 
-<div class="section light" style="text-align:center">
-<h2>Contact</h2>
-<p class="p">hello@jenipherlucas.com • Dar es Salaam, TZ</p>
-</div>
+        <span class="logo-jl">JL</span>
 
-<div class="cta">
-<div><h2 style="font-size:28px">Let's create something amazing!</h2><p style="opacity:.9;margin-top:8px">Have a project? Let's chat.</p></div>
-<div><button class="btn" style="background:white;color:#1e3a8a;width:100%;padding:14px">📧 Email Me</button></div>
-</div>
+        <span class="logo-dot">•</span>
 
-<footer style="text-align:center;padding:18px;color:#94a3b8;font-size:11px">© 2026 Jenipher Lucas • Blue Edition 💙</footer>
+        <span class="logo-text">
+            Portfolio
+        </span>
+
+    </a>
+
+
+    <button class="menu" id="menuButton">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+    <nav id="navigation">
+
+        <a href="#home">Home</a>
+
+        <a href="#work">Work</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main id="home">
+
+<section class="hero">
+
+
+    <div class="decor left"></div>
+
+    <div class="decor right"></div>
+
+
+    <div class="bubble one"></div>
+
+    <div class="bubble two"></div>
+
+    <div class="bubble three"></div>
+
+    <div class="bubble four"></div>
+
+
+
+    <!-- PROFILE -->
+
+    <div class="profile-area">
+
+        <div class="profile-glow"></div>
+
+
+        <div class="profile-ring">
+
+            <!--
+              Weka picha yako ndani ya repository
+              kwa jina profile.jpg
+            -->
+
+            <img
+                src="profile.jpg"
+                alt="Jenipher Lucas">
+
+        </div>
+
+
+        <span class="spark one"></span>
+
+        <span class="spark two"></span>
+
+        <span class="spark three"></span>
+
+        <span class="spark four"></span>
+
+    </div>
+
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+
+        <h1>
+            Hi I’m <span>Jenipher Lucas</span>
+        </h1>
+
+
+        <h2>
+            Creative Designer &amp; Developer
+        </h2>
+
+
+        <p class="description">
+
+            Building beautiful, thoughtful digital experiences.
+            Bringing ideas to life with design &amp; code
+
+            <b>•</b>
+
+            Based in 2026
+
+        </p>
+
+
+
+        <!-- SKILLS -->
+
+        <div class="skills" id="skills">
+
+
+            <span class="skill">
+                ☷ &nbsp; UI/UX Design
+            </span>
+
+
+            <span class="skill">
+                ♙ &nbsp; React &amp; Next.js
+            </span>
+
+
+            <span class="skill">
+                ◈ &nbsp; Frontend Development
+            </span>
+
+
+            <span class="skill">
+                ⌘ &nbsp; Python • APIs
+            </span>
+
+
+            <span class="skill">
+                ◉ &nbsp; Figma • Prototyping
+            </span>
+
+
+        </div>
+
+
+
+        <!-- LAPTOP -->
+
+        <div class="laptop">
+
+
+            <div class="laptop-screen">
+
+
+                <div class="screen-top">
+
+                    <span class="screen-logo">
+                        JL • Portfolio
+                    </span>
+
+                    <span>Home</span>
+
+                    <span>Work</span>
+
+                    <span>About</span>
+
+                    <span>Skills</span>
+
+                    <span>Contact</span>
+
+                    <span class="hire">
+                        Hire me
+                    </span>
+
+                </div>
+
+
+
+                <div class="screen-body">
+
+
+                    <div class="project-title">
+                        PROJECTS
+                    </div>
+
+
+                    <div class="line"></div>
+
+
+
+                    <div class="projects">
+
+
+                        <div class="project">
+
+                            <div class="project-image">
+                                ▣
+                            </div>
+
+                            <strong>
+                                E-commerce App
+                            </strong>
+
+                            <small>
+                                Modern shopping experience.
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="project">
+
+                            <div class="project-image">
+                                ✦
+                            </div>
+
+                            <strong>
+                                Brand Identity
+                            </strong>
+
+                            <small>
+                                Clean visual system.
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="project">
+
+                            <div class="project-image">
+                                ▦
+                            </div>
+
+                            <strong>
+                                Mobile Dashboard
+                            </strong>
+
+                            <small>
+                                Simple data interface.
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="laptop-base"></div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     WORK
+========================= -->
+
+<section class="normal" id="work">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            SELECTED WORK
+        </p>
+
+
+        <h2>
+            Designing ideas into useful digital experiences.
+        </h2>
+
+
+
+        <div class="work-grid">
+
+
+            <article class="work-card">
+
+                <span class="work-number">
+                    01
+                </span>
+
+                <h3>
+                    Web Design
+                </h3>
+
+                <p>
+                    Modern responsive interfaces with clean
+                    visual hierarchy.
+                </p>
+
+            </article>
+
+
+
+            <article class="work-card">
+
+                <span class="work-number">
+                    02
+                </span>
+
+                <h3>
+                    Frontend
+                </h3>
+
+                <p>
+                    Fast, accessible websites built with
+                    HTML, CSS and JavaScript.
+                </p>
+
+            </article>
+
+
+
+            <article class="work-card">
+
+                <span class="work-number">
+                    03
+                </span>
+
+                <h3>
+                    Creative Code
+                </h3>
+
+                <p>
+                    Interactive experiences that combine
+                    design and technology.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="normal about" id="about">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            ABOUT
+        </p>
+
+
+        <h2>
+            I turn ideas into polished digital experiences.
+        </h2>
+
+
+        <p class="about-text">
+
+            I’m Jenipher Lucas, a creative designer and
+            developer focused on thoughtful interfaces,
+            frontend development and practical digital products.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="normal contact" id="contact">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            CONTACT
+        </p>
+
+
+        <h2>
+            Have a project in mind?
+        </h2>
+
+
+        <a
+            class="contact-button"
+            href="mailto:hello@jenipherlucas.dev">
+
+            Let’s work together →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    Available for freelance
+
+    <span>•</span>
+
+    <strong>
+        jenipherlucas.dev
+    </strong>
+
+    <span>•</span>
+
+    © 2026
+
+    <span>•</span>
+
+    Crafted with passion
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const navigation =
+    document.getElementById("navigation");
+
+
+menuButton.addEventListener("click", function () {
+
+    navigation.classList.toggle("active");
+
+});
+
+
+document
+    .querySelectorAll("#navigation a")
+    .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navigation.classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
 
 </body>
 </html>
